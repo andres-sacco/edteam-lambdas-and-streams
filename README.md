@@ -9,6 +9,7 @@ Este repositorio contiene todo lo necesario para poder comenzar el curso.
 Los siguientes son los puntos más importantes en este archivo:
 - [Requisitos](#requisitos)
 - [Comprobar requisitos](#comprobar-requisitos)
+- [Ejercicios](#ejercicios)
 
 ## Requisitos
 
@@ -43,4 +44,24 @@ Si instalaste en tu computadora algunas de estas herramientas anteriormente o lo
    % git --version
    git version 2.34.1
    ````
+  
+## Ejercicios
+Este curso contiene una serie de ejercicios para que todos los estudiantes puedan practicar mas alla de lo que cada clase muestre.
 
+### Modulo 1: Introduccion
+- [Clase 3 - Que es una Lambda?](./exercises/module1/module1-class3.md)
+- [Clase 4 - Que es una collection?](./exercises/module1/module1-class4.md)
+
+### Modulo 2: Uso de los operadores intermedios
+- [Clase 1 - Usando los operadores de filtrado](./exercises/module2/module2-class1.md)
+- [Clase 2 - Usando los operadores de mapeo](./exercises/module2/module2-class2.md)
+- [Clase 3 - Usando los operadores de orden](./exercises/module2/module2-class3.md)
+- [Clase 4 - Usando los operadores de paginado](./exercises/module2/module2-class4.md)
+- [Clase 5 - Usando los operadores de para evitar duplicados](./exercises/module2/module2-class5.md)
+
+### Modulo 3: Uso de los operadores terminales
+- [Clase 1 - Recolectado los resultados](./exercises/module3/module3-class1.md)
+- [Clase 2 - Reduciendo los resultados](./exercises/module3/module3-class2.md)
+- [Clase 3 - Iterando los resultados](./exercises/module3/module3-class3.md)
+- [Clase 4 - Buscando en los resultados](./exercises/module3/module3-class4.md)
+- [Clase 5 - Agrupando los resultados](./exercises/module3/module3-class5.md)
