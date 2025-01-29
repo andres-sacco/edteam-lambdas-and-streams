@@ -44,4 +44,14 @@ public class ReservationDTO {
     public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
+
+    @Override
+    public String toString() {
+        return "ReservationDTO{" +
+                "id=" + id +
+                ", passengers=" + passengers +
+                ", itinerary=" + itinerary +
+                ", creationDate=" + creationDate +
+                '}';
+    }
 }

@@ -33,4 +33,13 @@ public class ItineraryDTO {
     public void setId(Long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "ItineraryDTO{" +
+                "id=" + id +
+                ", segment=" + segment +
+                ", price=" + price +
+                '}';
+    }
 }

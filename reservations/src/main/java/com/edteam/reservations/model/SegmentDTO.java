@@ -61,4 +61,16 @@ public class SegmentDTO {
     public void setId(Long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "SegmentDTO{" +
+                "id=" + id +
+                ", origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                ", departure='" + departure + '\'' +
+                ", arrival='" + arrival + '\'' +
+                ", carrier='" + carrier + '\'' +
+                '}';
+    }
 }

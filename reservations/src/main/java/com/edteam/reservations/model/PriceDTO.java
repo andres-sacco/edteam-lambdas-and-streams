@@ -43,4 +43,14 @@ public class PriceDTO {
     public void setId(Long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "PriceDTO{" +
+                "id=" + id +
+                ", totalPrice=" + totalPrice +
+                ", totalTax=" + totalTax +
+                ", basePrice=" + basePrice +
+                '}';
+    }
 }
