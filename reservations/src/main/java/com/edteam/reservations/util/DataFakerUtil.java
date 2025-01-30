@@ -32,7 +32,7 @@ public class DataFakerUtil {
         return reservation;
     }
 
-    private static List<PassengerDTO> generateFakePassengers(int count) {
+    public static List<PassengerDTO> generateFakePassengers(int count) {
         List<PassengerDTO> passengers = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             PassengerDTO passenger = new PassengerDTO();
@@ -48,7 +48,15 @@ public class DataFakerUtil {
         return passengers;
     }
 
-    private static ItineraryDTO generateFakeItinerary() {
+    public static List<ItineraryDTO> generateFakeItineraries(int count) {
+        List<ItineraryDTO> itineraries = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            itineraries.add(generateFakeItinerary());
+        }
+        return itineraries;
+    }
+
+    public static ItineraryDTO generateFakeItinerary() {
         ItineraryDTO itinerary = new ItineraryDTO();
         itinerary.setId(faker.number().randomNumber());
         itinerary.setSegment(generateFakeSegments(faker.number().numberBetween(1, 4)));
@@ -56,7 +64,7 @@ public class DataFakerUtil {
         return itinerary;
     }
 
-    private static List<SegmentDTO> generateFakeSegments(int count) {
+    public static List<SegmentDTO> generateFakeSegments(int count) {
         List<SegmentDTO> segments = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             SegmentDTO segment = new SegmentDTO();
