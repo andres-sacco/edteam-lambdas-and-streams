@@ -26,6 +26,5 @@ public class SimpleOrderExercise  {
         return reservations.stream()
                 .sorted(Comparator.comparing(ReservationDTO::getCreationDate))
                 .collect(Collectors.toList());
-
     }
 }
