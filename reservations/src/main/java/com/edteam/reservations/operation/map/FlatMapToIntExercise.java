@@ -14,6 +14,7 @@ public class FlatMapToIntExercise {
         showPassengersAge();
     }
 
+    // Obtener todas las edades de los pasajeros como una lista de enteros
     private static void showPassengersAge() {
         List<PassengerDTO> fakePassengers = DataFakerUtil.generateFakePassengers(5);
         List<Integer> fullNames = getPassengersAge(fakePassengers);
@@ -22,7 +23,6 @@ public class FlatMapToIntExercise {
         fullNames.forEach(System.out::println);
     }
 
-    // Obtener todas las edades de los pasajeros como una lista de enteros
     private static List<Integer> getPassengersAge(List<PassengerDTO> passengers) {
         return passengers.stream()
                 .flatMapToInt(p -> {
