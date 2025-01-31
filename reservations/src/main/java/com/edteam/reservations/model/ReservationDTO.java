@@ -2,6 +2,7 @@ package com.edteam.reservations.model;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Objects;
 
 public class ReservationDTO {
 
@@ -53,5 +54,17 @@ public class ReservationDTO {
                 ", itinerary=" + itinerary +
                 ", creationDate=" + creationDate +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ReservationDTO that = (ReservationDTO) o;
+        return Objects.equals(id, that.id) && Objects.equals(passengers, that.passengers) && Objects.equals(itinerary, that.itinerary) && Objects.equals(creationDate, that.creationDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, passengers, itinerary, creationDate);
     }
 }

@@ -1,6 +1,7 @@
 package com.edteam.reservations.model;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class PriceDTO {
 
@@ -52,5 +53,17 @@ public class PriceDTO {
                 ", totalTax=" + totalTax +
                 ", basePrice=" + basePrice +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        PriceDTO priceDTO = (PriceDTO) o;
+        return Objects.equals(id, priceDTO.id) && Objects.equals(totalPrice, priceDTO.totalPrice) && Objects.equals(totalTax, priceDTO.totalTax) && Objects.equals(basePrice, priceDTO.basePrice);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, totalPrice, totalTax, basePrice);
     }
 }

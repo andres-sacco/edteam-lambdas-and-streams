@@ -1,5 +1,7 @@
 package com.edteam.reservations.model;
 
+import java.util.Objects;
+
 public class SegmentDTO {
 
     private Long id;
@@ -72,5 +74,17 @@ public class SegmentDTO {
                 ", arrival='" + arrival + '\'' +
                 ", carrier='" + carrier + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        SegmentDTO that = (SegmentDTO) o;
+        return Objects.equals(id, that.id) && Objects.equals(origin, that.origin) && Objects.equals(destination, that.destination) && Objects.equals(departure, that.departure) && Objects.equals(arrival, that.arrival) && Objects.equals(carrier, that.carrier);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, origin, destination, departure, arrival, carrier);
     }
 }

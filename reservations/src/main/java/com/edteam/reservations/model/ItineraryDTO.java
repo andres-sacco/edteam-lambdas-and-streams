@@ -1,6 +1,7 @@
 package com.edteam.reservations.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ItineraryDTO {
 
@@ -41,5 +42,17 @@ public class ItineraryDTO {
                 ", segment=" + segment +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ItineraryDTO that = (ItineraryDTO) o;
+        return Objects.equals(id, that.id) && Objects.equals(segment, that.segment) && Objects.equals(price, that.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, segment, price);
     }
 }
