@@ -1,18 +1,20 @@
-package com.edteam.reservations.operation.map;
+package com.edteam.reservations.operation.other;
 
 import com.edteam.reservations.model.PassengerDTO;
 import com.edteam.reservations.util.DataFakerUtil;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MapExercise {
+public class CombineExercise {
 
     public static void main(String[] args) {
         showPassengersNames();
     }
 
-    //Obtener los nombres completos de los pasajeros
+    // Filtrar los pasajeros (PassengerDTO) que tengan 18 años o más y luego obtener solo sus nombres (firstName)
     private static void showPassengersNames() {
         List<PassengerDTO> fakePassengers = DataFakerUtil.generateFakePassengers(5);
         List<String> fullNames = getPassengersName(fakePassengers);
@@ -23,7 +25,9 @@ public class MapExercise {
 
     private static List<String> getPassengersName(List<PassengerDTO> passengers) {
         return passengers.stream()
-                .map(p -> p.getFirstName() + " " + p.getLastName())
+                .filter(p -> Period.between(p.getBirthday(), LocalDate.now()).getYears() >= 18)
+                .map(PassengerDTO::getFirstName)
                 .collect(Collectors.toList());
+
     }
 }
