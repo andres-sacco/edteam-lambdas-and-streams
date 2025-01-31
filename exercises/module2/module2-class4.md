@@ -23,7 +23,12 @@ Aqui encontraras una serie de ejercicios para poder practicar los conceptos rela
 - **Saltar las reservas con más de 4 pasajeros**: De una lista de `ReservationDTO`, omitir las reservas hasta encontrar la primera que tenga **4 o menos** pasajeros.
 - **Omitir segmentos con precios menores a 50 USD**: En una lista de `SegmentDTO`, ignorar los segmentos hasta encontrar uno cuyo precio sea de al menos 50 USD.
 
-### **Combinados**
+### ***Combinando operadores***
 - **Obtener las reservas de la posición 5 a la 10**: Dada una lista de `ReservationDTO`, omitir las primeras 5 reservas y tomar las siguientes 5.
 - **Obtener los pasajeros de la posición 3 a la 8**: Dada una lista de `PassengerDTO`, omitir los 3 primeros y tomar los siguientes 5.
 - **Seleccionar las reservas creadas en los últimos 3 meses, saltando las 2 más recientes**: Filtrar las reservas creadas en los últimos 3 meses, omitir las 2 más recientes y tomar las siguientes 5.
+  Aquí tienes los ejercicios con enunciados en una sola oración:
+- **Obtener los 5 pasajeros más jóvenes** ordenando por fecha de nacimiento descendente después de filtrar aquellos con una fecha de nacimiento válida y limitando el resultado a cinco.
+- **Listar las 3 reservas más recientes** ordenando por fecha de creación en orden descendente después de filtrar las reservas con una fecha de creación no nula y limitando el resultado a tres.
+- **Obtener los 10 itinerarios más caros** ordenando por precio total en orden descendente después de filtrar los itinerarios con un precio válido y limitando el resultado a diez.
+- **Seleccionar los primeros 2 pasajeros cuyo documento comience con "A"** ordenando alfabéticamente por número de documento después de filtrar los pasajeros cuyo documento comienza con "A" y limitando el resultado a dos.

@@ -26,3 +26,10 @@ Aqui encontraras una serie de ejercicios para poder practicar los conceptos rela
 - **Contar la cantidad de segmentos de cada itinerario:** A partir de una lista de `ItineraryDTO`, generar un `IntStream` con el número de segmentos de cada itinerario.
 - **Calcular la suma de todos los impuestos de una lista de precios:** A partir de una lista de `PriceDTO`, generar un `IntStream` con los valores de `totalTax` convertidos a enteros y sumarlos.
 - **Contar la cantidad de pasajeros en una lista de reservas:** A partir de una lista de `ReservationDTO`, generar un `IntStream` con la cantidad de pasajeros en cada reserva.
+
+### ***Combinando operadores***
+
+- **Obtener los nombres de pasajeros mayores de edad**: Filtrar los pasajeros (`PassengerDTO`) que tengan 18 años o más y luego obtener solo sus nombres (`firstName`).
+- **Listar los precios totales de itinerarios con más de 2 segmentos**: De una lista de `ItineraryDTO`, filtrar aquellos que tengan más de 2 segmentos y luego obtener sus precios totales (`totalPrice`).
+- **Obtener los correos electrónicos de pasajeros con documento tipo "PASAPORTE"**: Filtrar los pasajeros cuyo `documentType` sea "PASAPORTE" y luego mapear sus correos electrónicos (`email`).
+
