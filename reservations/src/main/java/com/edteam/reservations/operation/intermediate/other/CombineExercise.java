@@ -1,4 +1,4 @@
-package com.edteam.reservations.operation.other;
+package com.edteam.reservations.operation.intermediate.other;
 
 import com.edteam.reservations.model.PassengerDTO;
 import com.edteam.reservations.model.ReservationDTO;
@@ -14,8 +14,15 @@ public class CombineExercise {
 
     public static void main(String[] args) {
         showPassengersNames();
+
+        System.out.println("--------------------------");
         showAdultPassengersSorted();
+
+        System.out.println("--------------------------");
         showReservationWithNotNullCreationDate();
+
+        System.out.println("--------------------------");
+        showLatestUniqueReservations();
     }
 
     // Filtrar los pasajeros (PassengerDTO) que tengan 18 años o más y luego obtener solo sus nombres (firstName)
@@ -64,6 +71,24 @@ public class CombineExercise {
                 .filter(reserva -> reserva.getCreationDate() != null)
                 .sorted(Comparator.comparing(ReservationDTO::getCreationDate).reversed())
                 .limit(3)
+                .collect(Collectors.toList());
+    }
+
+    // Listar las reservas únicas más recientes filtrando aquellas con más de un pasajero, eliminando duplicados y ordenando por fecha de creación en orden descendente.
+    public static void showLatestUniqueReservations() {
+        List<ReservationDTO> fakeReservations = DataFakerUtil.generateFakeReservations();
+        fakeReservations.add(fakeReservations.get(1));
+        List<ReservationDTO> reservations = getLatestUniqueReservations(fakeReservations);
+
+        System.out.println("Reservas son:");
+        reservations.forEach(System.out::println);
+    }
+
+    private static List<ReservationDTO> getLatestUniqueReservations(List<ReservationDTO> reservations) {
+        return  reservations.stream()
+                .filter(reservation -> reservation.getPassengers().size() > 1)
+                .distinct()
+                .sorted((r1, r2) -> r2.getCreationDate().compareTo(r1.getCreationDate()))
                 .collect(Collectors.toList());
     }
 }

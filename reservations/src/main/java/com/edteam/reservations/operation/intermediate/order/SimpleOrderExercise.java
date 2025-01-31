@@ -1,4 +1,4 @@
-package com.edteam.reservations.operation.order;
+package com.edteam.reservations.operation.intermediate.order;
 
 import com.edteam.reservations.model.ReservationDTO;
 import com.edteam.reservations.util.DataFakerUtil;

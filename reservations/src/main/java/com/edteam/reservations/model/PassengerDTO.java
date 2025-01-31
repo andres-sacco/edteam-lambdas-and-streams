@@ -1,6 +1,7 @@
 package com.edteam.reservations.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class PassengerDTO {
 
@@ -85,5 +86,17 @@ public class PassengerDTO {
                 ", email='" + email + '\'' +
                 ", birthday=" + birthday +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        PassengerDTO that = (PassengerDTO) o;
+        return Objects.equals(id, that.id) && Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(documentNumber, that.documentNumber) && Objects.equals(documentType, that.documentType) && Objects.equals(birthday, that.birthday) && Objects.equals(email, that.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, documentNumber, documentType, birthday, email);
     }
 }

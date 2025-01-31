@@ -1,4 +1,4 @@
-package com.edteam.reservations.operation.map;
+package com.edteam.reservations.operation.intermediate.map;
 
 import com.edteam.reservations.model.ItineraryDTO;
 import com.edteam.reservations.model.SegmentDTO;

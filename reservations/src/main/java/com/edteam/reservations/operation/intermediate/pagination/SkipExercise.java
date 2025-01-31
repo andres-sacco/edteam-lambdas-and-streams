@@ -1,4 +1,4 @@
-package com.edteam.reservations.operation.pagination;
+package com.edteam.reservations.operation.intermediate.pagination;
 
 import com.edteam.reservations.model.ReservationDTO;
 import com.edteam.reservations.util.DataFakerUtil;
