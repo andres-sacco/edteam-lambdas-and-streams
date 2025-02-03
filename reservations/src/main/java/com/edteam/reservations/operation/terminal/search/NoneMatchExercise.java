@@ -11,7 +11,7 @@ public class NoneMatchExercise {
         showPassengerWithEmails();
     }
 
-    // Usar allMatch en ReservationDTO para confirmar que cada reserva contiene al menos un PassengerDTO.
+    // Usar noneMatch en PassengerDTO para confirmar que cada pasajero tiene un email.
     public static void showPassengerWithEmails() {
         List<PassengerDTO> passengers = DataFakerUtil.generateFakePassengers(5);
         boolean noEmptyEmails = getPassengerWithEmails(passengers);

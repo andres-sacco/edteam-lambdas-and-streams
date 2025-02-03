@@ -24,6 +24,7 @@ public class AverageExercise {
 
     private static OptionalDouble getTotalPassengers(List<PassengerDTO> passengers) {
         return passengers.stream()
+                .filter(p -> Period.between(p.getBirthday(), LocalDate.now()).getYears() >= 18)
                 .mapToInt(p -> Period.between(p.getBirthday(), LocalDate.now()).getYears())
                 .average();
     }

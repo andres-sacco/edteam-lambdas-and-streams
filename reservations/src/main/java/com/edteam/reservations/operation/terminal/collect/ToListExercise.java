@@ -13,7 +13,7 @@ public class ToListExercise {
         showPassengersEmails();
     }
 
-    //Obtener los nombres completos de los pasajeros
+    // Obtener los emails de todos los pasajeros
     private static void showPassengersEmails() {
         List<PassengerDTO> fakePassengers = DataFakerUtil.generateFakePassengers(5);
         List<String> fullNames = getPassengersEmails(fakePassengers);

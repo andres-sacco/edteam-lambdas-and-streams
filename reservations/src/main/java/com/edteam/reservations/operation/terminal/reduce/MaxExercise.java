@@ -17,7 +17,7 @@ public class MaxExercise {
     // Usar max para obtener el ReservationDTO con la fecha de creación más reciente.
     private static void showTotalPrice() {
         List<ReservationDTO> reservations = DataFakerUtil.generateFakeReservations();
-        Optional<ReservationDTO> latest= getLatestReservation(reservations);
+        Optional<ReservationDTO> latest = getLatestReservation(reservations);
 
         latest.ifPresent(reservation ->
                 System.out.println("La reserva más reciente fue creada el: " + reservation.getCreationDate())
