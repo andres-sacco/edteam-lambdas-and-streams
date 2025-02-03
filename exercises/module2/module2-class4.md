@@ -16,12 +16,6 @@ Aqui encontraras una serie de ejercicios para poder practicar los conceptos rela
 - **Tomar solo los primeros 4 pasajeros con correo corporativo**: De una lista de `PassengerDTO`, seleccionar los primeros 4 pasajeros cuyo correo termine en `@empresa.com`.
 - **Seleccionar los 3 itinerarios más caros**: Ordenar una lista de `ItineraryDTO` por `totalPrice` de mayor a menor y tomar solo los 3 primeros.
 
-### **skipWhile**
-- **Omitir reservas creadas antes de 2024**: Dada una lista de `ReservationDTO`, omitir las reservas con `creationDate` antes del 1 de enero de 2024. 
-- **Saltar pasajeros menores de edad**: En una lista de `PassengerDTO`, ignorar los pasajeros menores de 18 años hasta que aparezca el primero que sea mayor de edad.
-- **Omitir itinerarios con precio base menor a 100 USD**: En una lista de `ItineraryDTO`, omitir los itinerarios con `basePrice` menor a 100 hasta que aparezca uno que supere ese valor.
-- **Saltar las reservas con más de 4 pasajeros**: De una lista de `ReservationDTO`, omitir las reservas hasta encontrar la primera que tenga **4 o menos** pasajeros.
-- **Omitir segmentos con precios menores a 50 USD**: En una lista de `SegmentDTO`, ignorar los segmentos hasta encontrar uno cuyo precio sea de al menos 50 USD.
 
 ### ***Combinando operadores***
 - **Obtener las reservas de la posición 5 a la 10**: Dada una lista de `ReservationDTO`, omitir las primeras 5 reservas y tomar las siguientes 5.
