@@ -29,14 +29,6 @@ Aqui encontraras una serie de ejercicios para poder practicar los conceptos rela
 - **Agrupar concurrentemente itinerarios por basePrice en rangos**: Usar `groupingByConcurrent` para clasificar ItineraryDTO en rangos de PriceDTO.basePrice (por ejemplo, menos de 200, entre 200 y 500, más de 500).
 
 
-### **mapping**
-- **Obtener una lista de nombres completos de pasajeros**: Usar `mapping` para transformar PassengerDTO en una cadena que concatene firstName y lastName, recolectándolos en una lista.
-- **Mapear reservas a su creationDate en formato String**: Usar `mapping` para transformar ReservationDTO a una cadena formateada de su creationDate.
-- **Convertir itinerarios a su totalPrice**: Usar `mapping` para extraer de cada ItineraryDTO el PriceDTO.totalPrice y recolectarlos en una lista.
-- **Obtener los documentNumber de pasajeros en mayúsculas**: Usar `mapping` para transformar PassengerDTO a su documentNumber convertido a mayúsculas y recolectarlo en una lista.
-- **Mapear itinerarios a la cantidad de segmentos**: Usar `mapping` para transformar ItineraryDTO a la cantidad de SegmentDTO que contienen, recolectándolos en una lista de enteros.
-- **Transformar PriceDTO a una cadena formateada**: Usar `mapping` para convertir cada PriceDTO a un String con el formato "Base: X, Tax: Y, Total: Z" y recolectarlos en una lista.
-
 ### **collectingAndThen**
 - **Obtener una lista inmutable de nombres de pasajeros**: Usar `collectingAndThen` para recolectar los firstName de PassengerDTO en una lista y transformarla en inmutable.
 - **Contar las reservas y devolver el resultado como String**: Usar `collectingAndThen` para contar ReservationDTO y luego transformar el número a una cadena formateada.
